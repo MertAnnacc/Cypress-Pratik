@@ -17,4 +17,10 @@ describe('Temel Cypress Komutları', () => {
         cy.title().should('contains' , 'Amazon')
 
     });
+
+    it.only('cy.url ve cy.location', () => {
+        cy.visit('/')
+        cy.url().should('eq' , 'https://www.amazon.com/')
+        cy.url().should('include' , 'amazon')
+    });
 });
